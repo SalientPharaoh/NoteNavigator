@@ -5,11 +5,11 @@ NoteNavigator is the ultimate tool for musicians of all levels. With our powerfu
 
 ## Preview
 
-! [preview 1] (./preview/Screenshot 2023-04-17 043502.png)
+![preview 1](https://github.com/SalientPharaoh/NoteNavigator/blob/main/preview/Screenshot%202023-04-17%20043502.png)
 
-! [preview 2] (./preview/Screenshot 2023-04-17 043531.png)
+![preview 2](https://github.com/SalientPharaoh/NoteNavigator/blob/main/preview/Screenshot%202023-04-17%20043531.png)
 
-! [preview 3] (./preview/Screenshot 2023-04-17 043549.png)
+![preview 3](https://github.com/SalientPharaoh/NoteNavigator/blob/main/preview/Screenshot%202023-04-17%20043549.png)
 
 ## Transpose Sequences of Notes
 
