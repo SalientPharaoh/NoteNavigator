@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="/chord-transpose" method="POST" class="mx-auto t-5 w-50">
+    <div class="mb-3 m-4">
+        <div><p>Use the Standard Chord Notations! 
+        </p></div>
+        <label for="exampleInput" class="form-label">Enter the Chords separated by spaces -</label>
+        <input type="textbox" class="form-control" name="Notes" placeholder="Notes">
+    </div>
+    <select class="form-select m-4 t-5 w-50" name="sign" aria-label="Default select example">
+        <option selected>Choose the direction of Transpose</option>
+        <option value="+">Positive(+) : Higher Scale</option>
+        <option value="-">Negative(-) : Lower Scale</option>
+    </select>
+    <select class="form-select m-4 t-5 w-50" name="value" aria-label="Default select example">
+        <option selected>Select the steps of Transpose</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+      </select>
+    <div class="d-grid mx-auto b-2 m-2">
+        <button type="submit" class="btn btn-dark b-2">Transpose Chords</button>
+    </div>
+</form>
+{% if string|length !=0 %}
+<div class="form-group m-4 w-75 mx-auto" style="text-align:center;">
+    <label for="exampleFormControlTextarea1">Transposed Chords Appear here:-</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" disabled>{{string}}</textarea>
+  </div>
+{% else %}
+<div class="form-group m-4 w-75 mx-auto" style="text-align:center;">
+    <label for="exampleFormControlTextarea1">Transposed Chords Appear here:-</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" disabled></textarea>
+  </div>
+{% endif %}
+<div class="row m-4 mx-auto " style="width: 77vw;">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Note Transpose</h5>
+                <p class="card-text">Transpose any note sequenece into desired key.</p>
+                <a href="/" class="btn btn-dark">Click Here</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Chord Progression Generator</h5>
+                <p class="card-text">Generate the chord progression of any key.</p>
+                <a href="/chord-progression" class="btn btn-dark">Click Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock body %}

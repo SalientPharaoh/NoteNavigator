@@ -1,0 +1,2 @@
+add transpose step count. Parent note to target note
+add guitar capo function and ocnvert chords with respect to capo

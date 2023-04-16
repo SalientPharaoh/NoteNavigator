@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block body %}
+<form action="/chord-progression" method="POST" class="mx-auto t-5 w-50">
+    <div class="mb-3 m-4">
+        <div><p>Enter the key as a single note only!
+        </p></div>
+        <label for="exampleInput" class="form-label">Enter the key of the chord progression you want to generate -</label>
+        <input type="textbox" class="form-control" name="Song Key" placeholder="Notes">
+    </div>
+    <select class="form-select m-4 t-5 w-50" name="sign" aria-label="Default select example">
+        <option selected>Choose - Major Key / Minor Key</option>
+        <option value="M">Major</option>
+        <option value="m">Minor</option>
+    </select>
+    <div class="d-grid mx-auto b-2 m-2">
+        <button type="submit" class="btn btn-dark b-2">Generate Chords</button>
+    </div>
+</form>
+{% if string|length !=0 %}
+<div class="form-group m-4 w-75 mx-auto" style="text-align:center;">
+    <label for="exampleFormControlTextarea1">Generated Chords Appear here:-</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" disabled>{{string}}</textarea>
+  </div>
+{% else %}
+<div class="form-group m-4 w-75 mx-auto" style="text-align:center;">
+    <label for="exampleFormControlTextarea1">Generated Chords Appear here:-</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" disabled></textarea>
+  </div>
+{% endif %}
+<div class="row m-4 mx-auto " style="width: 77vw;">
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Note Transpose</h5>
+                <p class="card-text">Transpose any note sequenece into desired key.</p>
+                <a href="/" class="btn btn-dark">Click Here</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 mb-3 mb-sm-0">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Chord Transpose</h5>
+                <p class="card-text">Transpose any chord progression into desired key.</p>
+                <a href="/chord-transpose" class="btn btn-dark">Click Here</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
